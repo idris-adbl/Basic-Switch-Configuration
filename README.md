@@ -102,7 +102,7 @@ IV. Prevent unwanted DNS lookups.
    Switch01(config)# no ip domain-lookup
 
    
-V. Configure a MOTD banner.
+V. Configure a MOTD (Message Of The Day) banner.
 
    Switch01(config)# banner motd #
 
