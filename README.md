@@ -109,3 +109,76 @@ V. Configure a MOTD (Message Of The Day) banner.
 Enter Text message. End with the character ‘#’.
 
 Unauthorized access is strictly prohibited. #
+
+
+VI. Console port access should also be restricted. The default configuration is to allow all console
+connections with no password needed. To prevent console messages from interrupting
+commands, use the logging synchronous option.
+
+Switch01(config)# line con 0
+
+Switch01(config-line)# password cisco
+
+Switch01(config-line)# login
+
+Switch01(config-line)# logging synchronous
+
+Switch01(config-line)# exit
+
+Switch01(config)#
+
+Configure an IP Address on VLAN 1
+
+Switch01(config)# interface vlan 1
+
+Switch01(config-if)# ip address 192.168.1.5 255.255.255.0
+
+Switch01(config-if)# no shutdown
+
+VLAN 1 is the default VLAN on most switches. Assigning an IP address to VLAN 1 allows you to
+remotely manage the switch. The no shutdown command ensures the interface is activated
+
+
+Configure a Default Gateway
+Switch(config)# ip default-gateway 192.168.1.1
+The default gateway allows the switch to communicate with devices outside its local network,
+enabling remote management from different subnets.
+Enable Remote Management SSH (more secure):
+Enable SSH for remote access
+Create a local user
+Switch01(config)#username admin privilege 15 secret cisco
+
+Level 15: Full Access to all commands such as " reload " command, and the ability to make configuration changes.
+
+
+Level 1 : Read-Only and access to limited commands, such as the "ping" command.
+
+Secret ensures that the password is encrypted when stored in the switch's configuration file.
+
+Switch needs to generate RSA encryption keys for secure communication when using SSH
+
+
+Create a domain name
+
+Switch01(config)#ip domain-name mydoamin.local
+
+
+Generate RSA keys for SSH
+Switch01(config)#crypto key generate rsa
+The name for the keys will be: Switch01.mydomain.local
+Choose the size of the key modulus in the range of 360 to 2048 for your
+General Purpose Keys. Choosing a key modulus greater than 512 may take a few minutes.
+How many bits in the modulus [512]: 1024
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]
+Enable SSH for remote access:
+Switch01(config)#ip ssh version 2
+Switch01(config)#line vty 0 15
+Switch01(config-line)#transport input ssh
+Switch01(config-line)#login local
+Test Remote Access for SSH
+Open the Command Prompt on the PC and type:
+PC> ssh -l admin 192.168.1.5
+Enter the password to access the switch securely via SSH.
+Verification commands:
+Switch# show ip interface brief
+Switch# show run
