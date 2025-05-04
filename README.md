@@ -21,17 +21,17 @@
 
 Part 1: Simulating the Console Connection Using Packet Tracer
 
-    1. Open Cisco Packet Tracer and Create a Topology
+   1. Open Cisco Packet Tracer and Create a Topology
    
-    ○ Launch Packet Tracer.
+   ○ Launch Packet Tracer.
 
-    ○ Add the following devices to your workspace:
+   ○ Add the following devices to your workspace:
 
-     ■ One Cisco 2960 Switch.
+   ■ One Cisco 2960 Switch.
 
-     ■ One PC.
+   ■ One PC.
 
-     ■ One Console Cable
+   ■ One Console Cable
 
   2. Connect the PC to the Switch Using a Console Cable
      
