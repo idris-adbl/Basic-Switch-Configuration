@@ -7,59 +7,59 @@
 
 **Objective:**
 
-    ● Simulate a console connection to a switch using Packet Tracer.
+ ● Simulate a console connection to a switch using Packet Tracer.
 
-    ● Understand and configure basic switch settings.
+ ● Understand and configure basic switch settings.
 
-    ● Learn to configure hostname, IP addresses, MOTD and passwords.
+ ● Learn to configure hostname, IP addresses, MOTD and passwords.
 
-    ● Practice using show commands to verify switch configurations.
+ ● Practice using show commands to verify switch configurations.
 
 **Software Requirements:**
 
-    - CISCO Packet Tracer
+   - CISCO Packet Tracer
 
 Part 1: Simulating the Console Connection Using Packet Tracer
 
-       1. Open Cisco Packet Tracer and Create a Topology
+    1. Open Cisco Packet Tracer and Create a Topology
    
-       ○ Launch Packet Tracer.
+    ○ Launch Packet Tracer.
 
-      ○ Add the following devices to your workspace:
+    ○ Add the following devices to your workspace:
 
-         ■ One Cisco 2960 Switch.
+     ■ One Cisco 2960 Switch.
 
-         ■ One PC.
+     ■ One PC.
 
-        ■ One Console Cable
+     ■ One Console Cable
 
   2. Connect the PC to the Switch Using a Console Cable
      
-     ○ In Packet Tracer, select the Console Cable from the cable options.
+○ In Packet Tracer, select the Console Cable from the cable options.
 
-     ○ Click on the PC and connect the cable to the RS-232 port (also known as the console
+○ Click on the PC and connect the cable to the RS-232 port (also known as the console
 port).
 
-     ○ Click on the Switch and connect the other end to the Console Port.
+○ Click on the Switch and connect the other end to the Console Port.
 
-  5. Access the Switch via the Terminal on the PC
+3. Access the Switch via the Terminal on the PC
      
-     ○ Click on the PC.
+○ Click on the PC.
      
-     ○ Go to the Desktop tab and click on the Terminal application.
+○ Go to the Desktop tab and click on the Terminal application.
      
-     ○ Configure the terminal settings (leave the default settings: 9600 Baud rate, 8 data bits, no
+○ Configure the terminal settings (leave the default settings: 9600 Baud rate, 8 data bits, no
 parity, 1 stop bit).
 
-     ○ You should now have access to the switch’s CLI (Command Line Interface).
+○ You should now have access to the switch’s CLI (Command Line Interface).
 
 Part 2: Verify the default switch configuration.
 
-    In this step, you will examine the default switch settings, such as current switch configuration, IOS information, interface properties, VLAN information, and flash memory.
+In this step, you will examine the default switch settings, such as current switch configuration, IOS information, interface properties, VLAN information, and flash memory.
     
          Switch> enable
 
-  This command allows you to access Privileged EXEC Mode, where you can execute higher-level commands. By default, the switch starts in User EXEC Mode with limited access.
+This command allows you to access Privileged EXEC Mode, where you can execute higher-level commands. By default, the switch starts in User EXEC Mode with limited access.
 
 I. Examine the current running configuration file.
 
