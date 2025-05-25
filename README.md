@@ -1,4 +1,4 @@
-# Basic-Switch-Configuration
+# Basic-Switch-Configuration Console and SSH Connection
 
 
 ![Screenshot 2025-04-28 210200](https://github.com/user-attachments/assets/da51e79a-a820-401f-a2af-150d79dc884f)
